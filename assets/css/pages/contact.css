@@ -193,7 +193,7 @@ nav a:hover, nav a:focus {
     padding: 3em 1em 2em 1em;
     text-align: center;
     background: linear-gradient(120deg, #6c3cff 60%, #3a1aff 100%);
-    color: var(--color-text);
+    color: var(--color-text-light);
     border-radius: 0 0 2em 2em;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
     margin-bottom: 2em;
@@ -204,12 +204,17 @@ nav a:hover, nav a:focus {
     to { opacity: 1; transform: translateY(0); }
 }
 .hero h2 {
-    color: var(--color-primary);
+    color: var(--color-text-light);
     font-size: 3rem;
     font-weight: 800;
+    margin-bottom: 0.5em;
 }
 .hero p {
-    color: var(--color-text);
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    max-width: 640px;
+    margin: 0.5em auto 0;
+    line-height: 1.6;
 }
 
 .contacto-container {
