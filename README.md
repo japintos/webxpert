@@ -1,6 +1,6 @@
 # 🚀 webXpert - Sitio Web Profesional
 
-**Sitio web corporativo para servicios de diseño web, SEO, marketing digital, administración de bases de datos y soporte técnico IT.**
+**Sitio web corporativo para servicios de diseño web, SEO, marketing digital, administración de bases de datos, soporte técnico IT y soluciones SaaS.**
 
 ## 📋 Descripción
 
@@ -11,6 +11,7 @@ webXpert es una agencia digital que ofrece servicios profesionales de:
 - 🗄️ **Administración de Bases de Datos** - Auditoría, mantenimiento y backup
 - 🔧 **Auditoría Web** - Análisis y optimización de sitios web
 - 💻 **Soporte IT** - Soporte técnico completo para desktop, notebooks, impresoras, redes LAN y WiFi
+- ☁️ **Soluciones SaaS** - Productos en la nube: Nutrigestión (nutrición), Gestión Inmobiliaria, Gestión para Estudios Jurídicos
 
 ## 🏗️ Estructura del Proyecto
 
@@ -28,7 +29,8 @@ webXpert/
 │       ├── 📄 social-media.html     # Servicio de redes sociales
 │       ├── 📄 database-admin.html   # Servicio de BD
 │       ├── 📄 auditoria-web.html    # Servicio de auditoría web
-│       └── 📄 soporte-it.html       # Servicio de soporte IT
+│       ├── 📄 soporte-it.html       # Servicio de soporte IT
+│       └── 📄 saas.html             # Soluciones SaaS (Nutrigestión, Inmobiliaria, Jurídicos)
 ├── 📁 components/                   # Componentes reutilizables
 │   ├── 📄 projects-section.html     # Sección de proyectos
 │   ├── 📄 projects-section.css      # Estilos de proyectos
@@ -57,7 +59,8 @@ webXpert/
 │   │       └── 📄 contact.js        # Validación formulario contacto
 │   └── 📁 images/                   # Imágenes y recursos gráficos
 │       ├── 📁 logos/                # Logos de la empresa
-│       ├── 📁 icons/                # Iconos y elementos gráficos
+│       │   └── 📁 saas/             # Logos de productos SaaS (nutrigestion, gestioninmobiliaria, gestionjuridica)
+│       ├── 📁 icons/                # Iconos y elementos gráficos (incl. SaaS.jpeg para hero)
 │       ├── 📁 backgrounds/          # Imágenes de fondo
 │       ├── 📁 services/             # Imágenes relacionadas con servicios
 │       │   ├── 📁 smm/              # Imágenes de redes sociales
@@ -193,6 +196,11 @@ webXpert/
 - Configuración de WiFi empresarial
 - Resolución de problemas técnicos
 
+### ☁️ **Soluciones SaaS**
+- **Nutrigestión** - Sistema integral de gestión de turnos y atención para Lic. en Nutrición (historial clínico, dashboard, reportes).
+- **Gestión Inmobiliaria** - Administración y cobranzas para agentes e inmobiliarias (contratos, vencimientos, cartera).
+- **Gestión para Estudios Jurídicos** - Control de expedientes, agenda de audiencias, alertas de vencimientos y reportes.
+
 ## 🚀 Instalación y Uso
 
 ### **Requisitos**
@@ -240,9 +248,10 @@ El sitio incluye Google Analytics para:
 
 ### **Formulario de Contacto**
 - ✅ Configurado con validación en tiempo real
-- ✅ Incluye todos los servicios (incluyendo Soporte IT)
+- ✅ Incluye todos los servicios (incluyendo Soporte IT y SaaS)
 - ✅ Mensajes de error/éxito implementados
 - ✅ Accesibilidad completa
+- ✅ Hero de contacto con contraste y UX optimizados
 
 ### **Service Worker**
 - ✅ Configurado para cachear recursos estáticos
@@ -303,7 +312,14 @@ Para contribuir al proyecto:
 
 ## 📝 Changelog
 
-### v1.2.0 (2025-01-27) - **ESTADO ACTUAL**
+### v1.3.0 (2025-03) - **ESTADO ACTUAL**
+- ✅ **Soluciones SaaS** - Nueva sección en home y página dedicada `saas.html`
+- ✅ **Tres productos SaaS** - Nutrigestión, Gestión Inmobiliaria, Gestión para Estudios Jurídicos (con logos y descripciones)
+- ✅ **Hero de contacto** - Contraste y UX corregidos (texto claro sobre fondo violeta)
+- ✅ **Imágenes SaaS** - Hero `SaaS.jpeg` y logos en `assets/images/logos/saas/`
+- ✅ **Nosotros** - Actualización de rol en equipo (Full Stack Developer)
+
+### v1.2.0 (2025-01-27)
 - ✅ **Nuevo servicio de Soporte IT** agregado
 - ✅ **Responsive design mejorado** para proyectos
 - ✅ **Estilos de páginas legales** completados
@@ -338,9 +354,9 @@ Para contribuir al proyecto:
 - **SEO completo** con meta tags, sitemap, robots.txt y schema.org
 - **PWA configurada** con manifest, service worker y shortcuts
 - **Accesibilidad WCAG 2.1** con ARIA, focus states, skip links
-- **6 servicios implementados** con páginas dedicadas
+- **7 servicios/soluciones** con páginas dedicadas (incl. Soluciones SaaS con 3 productos)
 - **Portfolio de proyectos** con responsive optimizado
-- **Formulario de contacto** con validación y accesibilidad
+- **Formulario de contacto** con validación, accesibilidad y hero con buen contraste
 - **Sistema de diseño CSS** completo y coherente
 - **Páginas legales** con estilos profesionales
 - **Responsive design** optimizado para todos los dispositivos
