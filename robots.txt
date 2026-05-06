@@ -4,13 +4,10 @@ Allow: /
 # Sitemap
 Sitemap: https://japintos.github.io/webxpert/sitemap.xml
 
-# Permitir recursos críticos para SEO
-Allow: /assets/css/
-Allow: /assets/js/
+# Recursos estáticos
 Allow: /assets/images/
 
-# Solo bloquear archivos de configuración y desarrollo
-Disallow: /config/
+# Bloquear archivos de desarrollo
 Disallow: /node_modules/
 Disallow: *.log
 Disallow: *.md

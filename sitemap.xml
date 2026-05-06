@@ -1,78 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Página Principal -->
   <url>
     <loc>https://japintos.github.io/webxpert/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  
-  <!-- Páginas Principales -->
-  <url>
-    <loc>https://japintos.github.io/webxpert/pages/nosotros.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://japintos.github.io/webxpert/pages/contacto.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Servicios Principales -->
-  <url>
-    <loc>https://japintos.github.io/webxpert/pages/servicios/diseno-web.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://japintos.github.io/webxpert/pages/servicios/seo.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://japintos.github.io/webxpert/pages/servicios/social-media.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://japintos.github.io/webxpert/pages/servicios/database-admin.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://japintos.github.io/webxpert/pages/servicios/auditoria-web.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Nuevo Servicio: Soporte IT -->
-  <url>
-    <loc>https://japintos.github.io/webxpert/pages/servicios/soporte-it.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Páginas Legales -->
-  <url>
-    <loc>https://japintos.github.io/webxpert/privacidad.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://japintos.github.io/webxpert/terminos.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset> 
