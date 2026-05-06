@@ -46,6 +46,7 @@ VITE_FORMSPREE_FORM_ID=meenkyyj
 - `src/styles.css`: estilos globales + directivas Tailwind.
 - `assets/images/`: imágenes de marca, equipo, proyectos y soluciones SaaS.
 - `robots.txt` y `sitemap.xml`: archivos SEO para publicación.
+- `pages/japintos/index.html`: redirección estática al portfolio (`/pages/japintos/` en el dominio público después del build; Vite copia `pages/` a `dist/pages`).
 
 ## Rutas de la SPA
 

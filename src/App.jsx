@@ -8,6 +8,7 @@ import projectCarrito from "../assets/images/proyectos/carrito de compras.jpg";
 import projectWebxpert from "../assets/images/proyectos/proyecto2.jpg";
 import projectConcesionario from "../assets/images/proyectos/web-consecionario.jpg";
 import projectOudin from "../assets/images/proyectos/oudin.jpg";
+import projectKairos from "../assets/images/proyectos/kairos_portada.jpg";
 import saasNutrigestion from "../assets/images/logos/saas/nutrigestion.png";
 import saasInmobiliaria from "../assets/images/logos/saas/gestioninmobiliaria.png";
 import saasJuridica from "../assets/images/logos/saas/gestionjuridica.png";
@@ -48,6 +49,21 @@ const servicesOverview = [
 ];
 
 const featuredProjects = [
+  {
+    featured: true,
+    title: "Kairos Natural Market",
+    image: projectKairos,
+    alt: "Captura de Kairos Natural Market — e-commerce de productos naturales",
+    desc: "Kairos Natural Market es un e‑commerce en producción para una tienda de productos naturales fraccionados en Posadas, Misiones: catálogo, carrito, checkout con Mercado Pago y panel administrativo para pedidos, clientes, stock e informes, desplegado en la nube.",
+    stack: [
+      "React · React Router · TanStack Query · Axios · RHF · Framer · Chart.js",
+      "Node.js · Express · JWT · Joi · Helmet · rate limiting",
+      "MySQL / MariaDB",
+      "Mercado Pago · Cloudinary · Multer",
+      "Railway · env seguras",
+    ],
+    url: "https://www.kairosmarket.com.ar/",
+  },
   {
     title: "Carrito de Compras WebXpert",
     image: projectCarrito,
@@ -374,11 +390,28 @@ function HomePage() {
         <SectionTitle eyebrow="Portfolio" title="Proyectos Destacados" subtitle="Casos reales desarrollados por webXpert para diferentes industrias." />
         <div className="grid gap-6 md:grid-cols-2">
           {featuredProjects.map((project) => (
-            <article key={project.title} className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70">
-              <img src={project.image} alt={project.alt} className="h-56 w-full object-cover" loading="lazy" />
-              <div className="p-6">
+            <article
+              key={project.title}
+              className={`overflow-hidden rounded-2xl border bg-slate-900/70 ${
+                project.featured
+                  ? "border-brand-400/35 shadow-glow md:col-span-2 md:grid md:grid-cols-2 md:items-stretch"
+                  : "border-white/10"
+              }`}
+            >
+              <img
+                src={project.image}
+                alt={project.alt}
+                className={`w-full object-cover ${project.featured ? "h-56 md:h-full md:min-h-[280px]" : "h-56"}`}
+                loading="lazy"
+              />
+              <div className={`flex flex-col p-6 ${project.featured ? "md:justify-center" : ""}`}>
+                {project.featured && (
+                  <p className="mb-2 w-fit rounded-full border border-brand-400/40 bg-brand-600/25 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand-100">
+                    Destacado · En producción
+                  </p>
+                )}
                 <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="mt-2 text-sm text-slate-300">{project.desc}</p>
+                <p className={`mt-2 text-slate-300 ${project.featured ? "text-sm leading-relaxed" : "text-sm"}`}>{project.desc}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.stack.map((item) => (
                     <span key={item} className="rounded-full border border-white/20 px-2.5 py-1 text-xs text-slate-200">
@@ -386,9 +419,15 @@ function HomePage() {
                     </span>
                   ))}
                 </div>
-                <a href={project.url} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-300">
-                  Ver proyecto <ArrowRight size={14} />
-                </a>
+                {project.external !== false ? (
+                  <a href={project.url} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-300">
+                    Ver proyecto <ArrowRight size={14} />
+                  </a>
+                ) : (
+                  <Link to={project.url} className="mt-5 inline-flex w-fit items-center gap-2 text-sm font-semibold text-brand-300">
+                    {project.ctaLabel ?? "Ver más"} <ArrowRight size={14} />
+                  </Link>
+                )}
               </div>
             </article>
           ))}
