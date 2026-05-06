@@ -46,7 +46,8 @@ VITE_FORMSPREE_FORM_ID=meenkyyj
 - `src/styles.css`: estilos globales + directivas Tailwind.
 - `assets/images/`: imágenes de marca, equipo, proyectos y soluciones SaaS.
 - `robots.txt` y `sitemap.xml`: archivos SEO para publicación.
-- `pages/japintos/index.html`: redirección estática al portfolio (`/pages/japintos/` en el dominio público después del build; Vite copia `pages/` a `dist/pages`).
+- `public/japintos/index.html`: redirección a [Julio A. Pintos — Portfolio](https://porfolio1-xi.vercel.app/). Tras el build queda en **`/japintos/`** (Vite copia `public/` a la raíz de `dist/`).
+- `vercel.json`: en [Vercel](https://vercel.com) fuerza redirección HTTP desde `/japintos` (y `/pages/japintos` por compatibilidad) al portfolio. La carpeta `pages/` sigue copiándose al build para otros estáticos opcionales.
 
 ## Rutas de la SPA
 

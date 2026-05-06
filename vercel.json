@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/japintos",
+      "destination": "https://porfolio1-xi.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/japintos/",
+      "destination": "https://porfolio1-xi.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/pages/japintos",
+      "destination": "https://porfolio1-xi.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/pages/japintos/",
+      "destination": "https://porfolio1-xi.vercel.app/",
+      "permanent": false
+    }
+  ]
+}
