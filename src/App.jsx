@@ -3,6 +3,16 @@ import { ArrowRight, Database, Globe, LineChart, ShieldCheck, Smartphone, Wrench
 import { HashRouter, Link, NavLink, Route, Routes, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import logoSolito from "../assets/images/logos/logo_solito.jpg";
+import projectCarrito from "../assets/images/proyectos/carrito de compras.jpg";
+import projectWebxpert from "../assets/images/proyectos/proyecto2.jpg";
+import projectConcesionario from "../assets/images/proyectos/web-consecionario.jpg";
+import projectOudin from "../assets/images/proyectos/oudin.jpg";
+import saasNutrigestion from "../assets/images/logos/saas/nutrigestion.png";
+import saasInmobiliaria from "../assets/images/logos/saas/gestioninmobiliaria.png";
+import saasJuridica from "../assets/images/logos/saas/gestionjuridica.png";
+import teamJulio from "../assets/images/team/julio-pintos.jpg";
+import teamAgustin from "../assets/images/team/agustin-burgos.jpg";
 
 const fadeUp = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.45 } } };
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || "meenkyyj";
@@ -40,7 +50,7 @@ const servicesOverview = [
 const featuredProjects = [
   {
     title: "Carrito de Compras WebXpert",
-    image: "/assets/images/proyectos/carrito de compras.jpg",
+    image: projectCarrito,
     alt: "Captura del Carrito de Compras WebXpert",
     desc: "E-commerce SPA responsiva con catálogo, filtros, búsqueda, carrito y checkout.",
     stack: ["React + Vite", "JavaScript ES6+", "CSS3", "API REST"],
@@ -48,7 +58,7 @@ const featuredProjects = [
   },
   {
     title: "Landing para WebXpert",
-    image: "/assets/images/proyectos/proyecto2.jpg",
+    image: projectWebxpert,
     alt: "Captura de la landing de WebXpert",
     desc: "Sitio institucional moderno con foco en conversión y experiencia de usuario.",
     stack: ["HTML5", "CSS3", "JavaScript", "SEO"],
@@ -56,7 +66,7 @@ const featuredProjects = [
   },
   {
     title: "Concesionario Web",
-    image: "/assets/images/proyectos/web-consecionario.jpg",
+    image: projectConcesionario,
     alt: "Captura del proyecto Concesionario Web",
     desc: "Sitio para concesionaria con catálogo de vehículos, filtros y contacto directo.",
     stack: ["HTML5", "CSS3", "JavaScript", "Responsive"],
@@ -64,7 +74,7 @@ const featuredProjects = [
   },
   {
     title: "Oudin, Duarte & Asociados",
-    image: "/assets/images/proyectos/oudin.jpg",
+    image: projectOudin,
     alt: "Captura del sitio Oudin, Duarte & Asociados",
     desc: "Web institucional para estudio jurídico con enfoque en UX, accesibilidad y SEO.",
     stack: ["HTML5", "CSS3", "JavaScript", "Accesibilidad"],
@@ -226,21 +236,21 @@ const serviceDetails = {
     cards: [
       {
         title: "Nutrigestión",
-        logoSrc: "/assets/images/logos/saas/nutrigestion.png",
+        logoSrc: saasNutrigestion,
         logoAlt: "Logo de Nutrigestión",
         text: "Gestión de turnos e historial clínico para nutricionistas.",
         points: ["Agenda online", "Historial centralizado", "Dashboard y reportes"],
       },
       {
         title: "Gestión Inmobiliaria",
-        logoSrc: "/assets/images/logos/saas/gestioninmobiliaria.png",
+        logoSrc: saasInmobiliaria,
         logoAlt: "Logo de Gestión Inmobiliaria",
         text: "Administración y cobranzas para inmobiliarias.",
         points: ["Propiedades y contratos", "Vencimientos y pagos", "KPIs de cartera"],
       },
       {
         title: "Gestión Jurídica",
-        logoSrc: "/assets/images/logos/saas/gestionjuridica.png",
+        logoSrc: saasJuridica,
         logoAlt: "Logo de Gestión Jurídica",
         text: "Control de expedientes y audiencias para estudios.",
         points: ["Expedientes y estados", "Alertas de vencimiento", "Reportes por cliente/área"],
@@ -298,7 +308,7 @@ function SiteShell({ children }) {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img src="/assets/images/logos/logo_solito.jpg" alt="webXpert" className="h-10 w-10 rounded-md object-cover" />
+            <img src={logoSolito} alt="webXpert" className="h-10 w-10 rounded-md object-cover" />
             <span className="text-lg font-semibold">webXpert</span>
           </Link>
           <nav className="hidden items-center gap-8 text-sm md:flex">
@@ -399,7 +409,7 @@ function NosotrosPage() {
       role: "Socio Fundador",
       techRole: "Tech Lead - Full Stack Developer",
       specialties: "Análisis, diseño, codificación y ventas",
-      image: "/assets/images/team/julio-pintos.jpg",
+      image: teamJulio,
       socials: [
         { label: "Facebook", url: "https://www.facebook.com/julioapintos" },
         { label: "Instagram", url: "https://www.instagram.com/julioapintos" },
@@ -412,7 +422,7 @@ function NosotrosPage() {
       role: "Socio Fundador",
       techRole: "Full Stack Developer",
       specialties: "Análisis, diseño, codificación, maquetado",
-      image: "/assets/images/team/agustin-burgos.jpg",
+      image: teamAgustin,
       socials: [
         { label: "Facebook", url: "https://www.facebook.com/profile.php?id=61564704710500" },
         { label: "Instagram", url: "https://www.instagram.com/gree.dev/" },
