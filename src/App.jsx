@@ -98,6 +98,44 @@ const featuredProjects = [
   },
 ];
 
+const pricingItems = [
+  {
+    service: "Landing Page",
+    description: "Página única optimizada para conversión y performance. Ideal para campañas o lanzamientos.",
+    price: "$350 - $600",
+  },
+  {
+    service: "Sitio Institucional",
+    description: "Web corporativa de 3 a 6 secciones, adaptable y escalable.",
+    price: "$700 - $1.200",
+  },
+  {
+    service: "E-Commerce",
+    description: "Tienda online con carrito, pasarela de pago y panel de gestión.",
+    price: "$1.200 - $2.000",
+  },
+  {
+    service: "Soluciones a medida",
+    description: "Desarrollo personalizado según requerimientos del cliente.",
+    price: "Desde $2.000",
+  },
+  {
+    service: "Sistemas de gestión",
+    description: "ERP, CRM o paneles internos para administración y control.",
+    price: "$2.500 - $4.000",
+  },
+  {
+    service: "Auditorías web",
+    description: "Análisis técnico, UX y performance con informe detallado.",
+    price: "$250 - $500",
+  },
+  {
+    service: "SEO & Optimización",
+    description: "Mejora de posicionamiento orgánico y velocidad de carga.",
+    price: "$300 - $800",
+  },
+];
+
 const serviceDetails = {
   "diseno-web": {
     title: "Diseño Web Profesional",
@@ -338,7 +376,7 @@ function SiteShell({ children }) {
       {children}
       <footer className="border-t border-white/10 px-6 py-8 text-sm text-slate-400">
         <div className="mx-auto flex max-w-6xl flex-col justify-between gap-3 md:flex-row">
-          <p>© {new Date().getFullYear()} webXpert. Todos los derechos reservados.</p>
+          <p>© 2025 webXpert. Todos los derechos reservados.</p>
           <div className="flex flex-wrap items-center gap-5">
             <a href="https://www.instagram.com/webxpert.soluciones/" target="_blank" rel="noreferrer">Instagram</a>
             <a href="https://www.linkedin.com/in/julio-pintos-0638a8200/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -433,6 +471,7 @@ function HomePage() {
           ))}
         </div>
       </section>
+
     </main>
   );
 }
@@ -584,6 +623,36 @@ function ServiciosPage() {
           </article>
         ))}
       </div>
+
+      <section className="mt-16 overflow-hidden rounded-3xl border border-brand-400/30 bg-gradient-to-br from-[#0a1024] via-[#111a38] to-[#1d2150] p-6 shadow-glow md:p-10">
+        <SectionTitle
+          eyebrow="Precios"
+          title="💼 Lista de precios WebXpert"
+          subtitle="Estos valores son estimativos en USD y pueden ajustarse según el alcance, prioridad y complejidad. Nos adaptamos al bolsillo de nuestros clientes con propuestas personalizadas."
+        />
+
+        <div className="grid gap-4 md:grid-cols-2">
+          {pricingItems.map((item) => (
+            <article
+              key={item.service}
+              className="rounded-2xl border border-white/15 bg-slate-900/60 p-5 transition hover:-translate-y-0.5 hover:border-brand-300/60 hover:bg-slate-900/80"
+            >
+              <h3 className="text-lg font-semibold text-slate-100">{item.service}</h3>
+              <p className="mt-2 text-sm text-slate-300">{item.description}</p>
+              <p className="mt-4 text-sm font-semibold text-cyan-300">{item.price}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link
+            to="/contacto"
+            className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-500"
+          >
+            Solicitar cotización personalizada <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
