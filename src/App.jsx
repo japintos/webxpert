@@ -9,6 +9,7 @@ import projectWebxpert from "../assets/images/proyectos/proyecto2.jpg";
 import projectConcesionario from "../assets/images/proyectos/web-consecionario.jpg";
 import projectOudin from "../assets/images/proyectos/oudin.jpg";
 import projectKairos from "../assets/images/proyectos/kairos_portada.jpg";
+import projectAudiencias from "../assets/images/proyectos/sgda_pj_portada.jpg";
 import saasNutrigestion from "../assets/images/logos/saas/nutrigestion.png";
 import saasInmobiliaria from "../assets/images/logos/saas/gestioninmobiliaria.png";
 import saasJuridica from "../assets/images/logos/saas/gestionjuridica.png";
@@ -54,6 +55,7 @@ const featuredProjects = [
     title: "Kairos Natural Market",
     image: projectKairos,
     alt: "Captura de Kairos Natural Market — e-commerce de productos naturales",
+    badge: "Generando nuevos clientes y cerrando ventas 24/7",
     desc: "Kairos Natural Market es un e‑commerce en producción para una tienda de productos naturales fraccionados en Posadas, Misiones: catálogo, carrito, checkout con Mercado Pago y panel administrativo para pedidos, clientes, stock e informes, desplegado en la nube.",
     stack: [
       "React · React Router · TanStack Query · Axios · RHF · Framer · Chart.js",
@@ -65,6 +67,22 @@ const featuredProjects = [
     url: "https://www.kairosmarket.com.ar/",
   },
   {
+    title: "Audiencias Laborales - Sistema Institucional",
+    image: projectAudiencias,
+    alt: "Captura del Sistema Institucional de Audiencias Laborales",
+    badge: "Aprobado institucionalmente",
+    badgeSecondary: "En Producción",
+    desc: "Sistema web institucional para gestión integral de audiencias laborales: registro de causas, agenda por sala y juzgado, perfiles de usuario, documentación centralizada y trazabilidad completa, con seguimiento en tiempo real y reportes operativos. Proyecto aprobado por la Cámara Laboral de Posadas.",
+    stack: [
+      "React + TypeScript",
+      "Node.js + Express",
+      "MySQL / MariaDB",
+      "JWT · Helmet · roles",
+      "Railway",
+    ],
+    url: "https://audiencias.up.railway.app/",
+  },
+  {
     title: "Carrito de Compras WebXpert",
     image: projectCarrito,
     alt: "Captura del Carrito de Compras WebXpert",
@@ -73,11 +91,12 @@ const featuredProjects = [
     url: "https://carritocompraswebxpert.vercel.app/catalogo",
   },
   {
-    title: "Landing para WebXpert",
+    title: "Sitio Institucional WebXpert",
     image: projectWebxpert,
-    alt: "Captura de la landing de WebXpert",
-    desc: "Sitio institucional moderno con foco en conversión y experiencia de usuario.",
-    stack: ["HTML5", "CSS3", "JavaScript", "SEO"],
+    alt: "Captura del sitio institucional de WebXpert",
+    badgeSecondary: "En Producción",
+    desc: "Sitio institucional oficial de WebXpert en producción, diseñado para comunicar propuesta de valor, servicios y casos reales con foco en conversión, rendimiento y experiencia consistente en desktop y mobile.",
+    stack: ["React + Vite", "React Router", "Tailwind CSS", "Formspree + SEO técnico"],
     url: "https://www.webxpert.com.ar",
   },
   {
@@ -446,6 +465,16 @@ function HomePage() {
                 {project.featured && (
                   <p className="mb-2 w-fit rounded-full border border-brand-400/40 bg-brand-600/25 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand-100">
                     Destacado · En producción
+                  </p>
+                )}
+                {project.badge && (
+                  <p className="mb-2 w-fit rounded-full border border-cyan-300/40 bg-cyan-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-cyan-200">
+                    {project.badge}
+                  </p>
+                )}
+                {project.badgeSecondary && (
+                  <p className="mb-2 w-fit rounded-full border border-emerald-300/40 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-emerald-200">
+                    {project.badgeSecondary}
                   </p>
                 )}
                 <h3 className="text-xl font-semibold">{project.title}</h3>
