@@ -3,7 +3,7 @@ import { ArrowRight, Database, Globe, LineChart, ShieldCheck, Smartphone, Wrench
 import { HashRouter, Link, NavLink, Route, Routes, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import logoSolito from "../assets/images/logos/logo_solito.jpg";
+import logoSolito from "../assets/images/logos/logo_solito2.jpg";
 import projectCarrito from "../assets/images/proyectos/carrito de compras.jpg";
 import projectWebxpert from "../assets/images/proyectos/proyecto2.jpg";
 import projectConcesionario from "../assets/images/proyectos/web-consecionario.jpg";
